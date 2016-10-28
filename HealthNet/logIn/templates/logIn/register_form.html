@@ -1,0 +1,12 @@
+{% extends 'logIn/banner.html' %}
+{% block content %}
+
+<h2>Please Register</h2>
+
+<div class="container">
+  <form action="/register/" method="post">{% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Save" />
+  </form>
+</div>
+{% endblock %}
